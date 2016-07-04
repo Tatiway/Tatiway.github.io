@@ -9,7 +9,7 @@ import * as pageActions from '../actions/PageActions'
 export default class App extends Component {
   render(){
 
-    const {  page  }  = this.props
+    const { user, page  }  = this.props
     const { getPhotos, getMorePhotos, getPhotoInfo, addLike, toggleClass }  = this.props.pageActions
 
 
