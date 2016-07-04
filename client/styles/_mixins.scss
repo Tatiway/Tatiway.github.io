@@ -1,0 +1,38 @@
+@mixin clearfix {
+  &:before {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+}
+@mixin tablet-v {
+  @media (min-width: #{$tablet-v-width}) {
+    @content;
+  }
+}
+@mixin tablet-h {
+  @media (min-width: #{$tablet-h-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin desktop-l {
+  @media (min-width: #{$desktop-l-width}) {
+    @content;
+  }
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
