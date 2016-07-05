@@ -1,44 +1,39 @@
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
+var precss = require('precss');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
-
-    './client/reduxstagram'
+    // 'webpack-hot-middleware/client',
+    'babel-polyfill',
+    './app/main'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': "'production'"
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
-  ],
+  // plugins: [
+  //   new webpack.optimize.OccurenceOrderPlugin(),
+  //   new webpack.HotModuleReplacementPlugin(),
+  //   new webpack.NoErrorsPlugin()
+  // ]
   module: {
     loaders: [
-    // js
-    {
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'client')
-    },
-    // CSS
-    {
-      test: /\.scss$/,
-      include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!sass-loader!autoprefixer-loader?browsers=last 3 versions'
-    }
+      {
+        loaders: ['babel-loader'],
+        include: path.resolve(__dirname, 'app'),
+        test: /\.js$/,
+        plugins: ['transform-runtime'],
+      },
+      {
+        test: /\.scss$/,
+        include: path.join(__dirname, 'app'),
+        loader: 'style-loader!css-loader!sass-loader!autoprefixer-loader?browsers=last 3 versions',
+      }
     ]
   }
-};
+
+}
