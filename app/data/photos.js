@@ -17,7 +17,7 @@ const photos = [
    },
    {
       "code":"BAF_KY4wcRY",
-      "caption":"Cleaned my office and mounted my recording gear overhead. Stoked for 2016!",
+      "caption":"Comment 3",
       "likes":79,
       "id":"1154606670337393752",
       "display_src":"https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e35/923995_1704188643150533_1383710275_n.jpg",
@@ -25,7 +25,7 @@ const photos = [
    },
    {
       "code":"BAPIPRjQce9",
-      "caption":"Making baby pancakes for one early rising baby. ☕️🍴",
+      "caption":"Comment 4",
       "likes":47,
       "id":"1157179863266871229",
       "display_src":"https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12407480_1654828594805097_152207166_n.jpg",
@@ -33,7 +33,7 @@ const photos = [
    },
    {
       "code":"-hZh6IQcfN",
-      "caption":"New Stickers just came in. I'll do another mailing in a few weeks if you want some. #javascript",
+      "caption":"Comment 5",
       "likes":66,
       "id":"1126293663140399053",
       "display_src":"https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/11875511_1562439187344831_813588280_n.jpg",
